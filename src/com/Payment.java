@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import com.mysql.cj.xdevapi.Table;
+
 public class Payment {
 	
 	private Connection connect() {
@@ -36,15 +38,15 @@ public class Payment {
 			} 
 	 
 			// Prepare the html table to be displayed    
-			output = "<table border=\'1\'><tr>"
+			output = "<table class='table' border='1'><thead class='table-dark'>"
 					+ "<th>Customer ID</th>"
-					+ "<th>TEL No</th><th>date</th>"
+					+ "<th>TEL No</th>"
+					+ "<th>Date</th>"
 					+ "<th>Amount</th>"
 					+ "<th>Card No</th>"
 					+ "<th>Postal No</th>"
 					+ "<th>Update</th>"
-					+ "<th>Remove</th>"
-					+ "</tr>";
+					+ "<th>Remove</th></thead>";
 	 
 			String query = "select * from payment"; 
 			Statement stmt = con.createStatement(); 
