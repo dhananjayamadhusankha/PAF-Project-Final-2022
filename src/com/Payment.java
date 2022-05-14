@@ -59,7 +59,7 @@ public class Payment {
 				String cusId = rs.getString("cusId");
 				String telNo = rs.getString("telNo");
 				String date = rs.getString("date");
-				String amount = rs.getString("amount");
+				String amount = Double.toString(rs.getDouble("amount"));
 				String cardNo = rs.getString("cardNo");
 				String postalNo = rs.getString("postalNo");
 
@@ -125,7 +125,7 @@ public class Payment {
 			 preparedStmt.setString(2, cusId);
 			 preparedStmt.setString(3, telNo);
 			 preparedStmt.setString(4, date);
-			 preparedStmt.setString(5, amount);
+			 preparedStmt.setDouble(5, Double.parseDouble(amount));
 			 preparedStmt.setString(6, cardNo);
 			 preparedStmt.setString(7, postalNo);
 			
@@ -169,7 +169,7 @@ public class Payment {
 			preparedStmt.setString(1, cusId);
 			preparedStmt.setString(2, telNo);
 			preparedStmt.setString(3, date);
-			preparedStmt.setString(4, amount);
+			preparedStmt.setDouble(4, Double.parseDouble(amount));
 			preparedStmt.setString(5, cardNo);
 			preparedStmt.setString(6, postalNo);
 			preparedStmt.setInt(7, Integer.parseInt(payId)); 
