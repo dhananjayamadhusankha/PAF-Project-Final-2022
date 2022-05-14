@@ -9,12 +9,36 @@
 <link rel="stylesheet" href="Views/bootstrap.min.css"> 
 <script src="Components/jquery.min.js"></script> 
 <script src="Components/payment.js"></script> 
+<!--  jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
 <!--  link font-->
 <head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
+
+<script>
+    $(document).ready(function(){
+      var date_input=$('input[name="date"]'); //our date input has the name "date"
+      var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+      var options={
+        format: 'yyyy/mm/dd',
+        container: container,
+        todayHighlight: true,
+        autoclose: true,
+      };
+      date_input.datepicker(options);
+    })
+</script>
 
 <!--add the font on body  -->
 <style>
@@ -43,7 +67,7 @@ body {
   					
   					<div class="col-md-6">
 	  					<label class="form-label">Date:</label>
-	  					<input id="date" name="date" type="text" class="form-control form-control-sm" placeholder="Enter Date" required>
+	  					<input id="date" name="date" class="form-control datepicker" type="text" placeholder="YYY/MM/DD" required>
   					</div>
 					 
 					<div class="col-md-6">
