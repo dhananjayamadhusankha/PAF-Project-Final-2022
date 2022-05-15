@@ -50,11 +50,15 @@ body {
 <title>Payment Management</title>
 </head>
 <body>
-<div class="container"> 
-	<div class="row">  
-		<div class="col"> 
-			<h1 class="font-weight-bold">PAYMENT DETAILS</h1>
-				<form class="row g-3" id="formPayment" name="formPayment" method="post" action="Payment.jsp">  
+<div class="container">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <h1 class="font-weight-bold text-white mx-auto">Elctro Grid</h1>
+</nav>
+<br>
+	<div class="row">
+		<div class="col">
+			<h3 class="font-weight-bold">PAYMENT DETAILS</h3>
+				<form class="row g-3" id="formPayment" name="formPayment" method="post" action="Payment.jsp">
 					<div class="col-md-6">
 						<label class="form-label">Customer ID:</label>  
 	 	 				<input id="cusId" name="cusId" type="text"  class="form-control form-control-sm" placeholder="Enter Customer ID" required>
@@ -63,7 +67,7 @@ body {
 					<div class="col-md-6">
 						<label class="form-label">Telephone No:</label>
 						<input id="telNo" name="telNo" type="tel" class="form-control form-control-sm" placeholder="Enter Telephone No" required>
-					</div>    
+					</div>
   					
   					<div class="col-md-6">
 	  					<label class="form-label">Date:</label>
@@ -84,9 +88,11 @@ body {
 						<label class="form-label">Postal No:</label>
 						<input id="postalNo" name="postalNo" type="text" class="form-control form-control-sm" placeholder="Enter Postal Code" required>
 					</div>
-					
+					<div class="col-md-6">
+						<h1> </h1>
+					</div>
   					<div class="col-12">
-	  					<input id="btnSave" name="btnSave" type="button" value="Submit Payment" class="btn btn-primary" required>  
+	  					<input id="btnSave" name="btnSave" type="button" value="Submit Payment" class="btn btn-primary" required>
 						<input type="hidden" id="hidPaymentIDSave" name="hidPaymentIDSave" value="">
   					</div>
 					 

@@ -142,19 +142,19 @@ function validatePaymentForm()
 	// 	CUS ID
 	if ($("#cusId").val().trim() == "")
 	{
-		return "Insert Item Code.";
+		return "Insert Customer ID.";
 	}
 	
 	// TEL NO
 	if ($("#telNo").val().trim() == "")
 	{
-		return "Insert Item Name.";
+		return "Insert Name.";
 	}
 	
 	// DATE
 	if ($("#date").val().trim() == "")
 	{
-		return "Insert Item Date.";
+		return "Insert Date.";
 	}
 	
 	// PRICE-------------------------------
@@ -171,18 +171,18 @@ function validatePaymentForm()
 	}
 	
 	// convert to decimal price
-	$("#itemPrice").val(parseFloat(tmpAmount).toFixed(2));
+	$("#amount").val(parseFloat(tmpAmount).toFixed(2));
 	
 	// CARD NO------------------------
 	if ($("#cardNo").val().trim() == "")
 	{
-		return "Insert Item Card No.";
+		return "Insert Card No.";
 	}
 	
 	// POSTAL NO------------------------
 	if ($("#postalNo").val().trim() == "")
 	{
-		return "Insert Item Postal No.";
+		return "Insert Postal No.";
 	}
 	return true;
 }
